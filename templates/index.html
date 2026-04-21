@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Similarity Detection System</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>File Similarity Detection System</h1>
+    <div class="input-section">
+        <textarea id="text1" placeholder="Paste first text here..."></textarea>
+        <textarea id="text2" placeholder="Paste second text here..."></textarea>
+        <button onclick="compareFiles()">Compare</button>
+    </div>
+
+    <div id="results"></div>
+    <canvas id="chart"></canvas>
+
+    <div class="explanation">
+        <h2>How it works</h2>
+        <p><b>Rabin-Karp:</b> Uses rolling hash to quickly detect substring matches. Efficient for multiple pattern searches.</p>
+        <p><b>KMP:</b> Uses prefix-suffix table (LPS) to avoid re-checking characters. Efficient for single long pattern searches.</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
